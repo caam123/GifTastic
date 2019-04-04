@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Rubik", Sans-serif;
+    color:white;
+    font-size: 20px;
+    background: linear-gradient(135deg, rgb(0, 58, 54) 0%, rgb(0, 55, 75) 19%, rgb(7, 0, 31) 49%, rgb(46, 0, 73) 100%) repeat-x;
+}
+
+nav{
+    height:2.5em;
+    border-bottom: 1px solid white;
+    margin-bottom: 2em;
+    padding: 0;
+}
+
+#back{
+    color:greenyellow;
+    margin: 0.6em 0.5em 0.5em 0.5em;
+    padding: 0.1em 0 1.5em 0;
+    border:1px solid white;
+    width:1.5em;
+    height: 1.5em;
+    text-align: center;
+
+}
