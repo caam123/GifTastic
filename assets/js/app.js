@@ -1,7 +1,7 @@
 
 var bands = ["George Michael", "Erasure", "Pet Shop Boys", "OMD", "Madonna"];
-
-
+//var apikey = "I2RjtQO6f9dyGFX4Yt6r1GKXbWD0gU1w";
+var apikey = "dc6zaTOxFJmzC";
 
 // 1. Funcion Display Buttons - Aparecen en la página
 function displayButtons(){
@@ -37,9 +37,25 @@ $("#addBand").on("click", function(event){
 
 // ===== Comentario importante!!! dentro de .on ( ".botones") ayuda a descender del id de botones list y filtrar a través de la clase, por alguna razon no podia hacerlo de la forma de siempre ===== ¿? //
 $("#botonesList").on("click", ".botones", function(){
-    console.log("click");
-
+    
     var inputBand = $(this).attr("data-name");
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ inputBand+ "&api_key=" + "I2RjtQO6f9dyGFX4Yt6r1GKXbWD0gU1w&limit=5"
+    console.log(queryURL);
+
+    $.ajax({
+        url:queryURL,
+        method: "GET"
+    })
+    .then(function(response){
+        console.log(response);
+        var imgUrl = response.data[0].images.fixed_height_still.url;
+        console.log(imgUrl);
+
+
+
+
+    })
+
 
 });
 
