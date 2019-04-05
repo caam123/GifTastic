@@ -1,13 +1,24 @@
+:root{
+    --verde: #02f502;
+}
+
+
 *{
     box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
     font-family: "Rubik", Sans-serif;
     color:white;
     font-size: 20px;
-    background: linear-gradient(135deg, rgb(0, 58, 54) 0%, rgb(0, 55, 75) 19%, rgb(7, 0, 31) 49%, rgb(46, 0, 73) 100%) repeat-x;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat; 
+    font-family: 'Share Tech Mono', monospace;
 }
+
+
 
 nav{
     height:2.5em;
@@ -16,6 +27,12 @@ nav{
     padding: 0;
 }
 
+
+a:link,
+a:hover{
+    text-decoration: none;
+    color:magenta;
+}
 #back{
     color:greenyellow;
     margin: 0.6em 0.5em 0.5em 0.5em;
@@ -24,5 +41,64 @@ nav{
     width:1.5em;
     height: 1.5em;
     text-align: center;
+    text-decoration: none;
 
+}
+
+#back:hover{
+    border: 1px solid greenyellow;
+}
+a{
+    color:white;
+}
+
+
+/* ===== ASIDE LOGO ICON ==== */
+
+
+img{
+    width: 100%;
+}
+
+.logoicon{
+    padding:0;
+    margin:0;
+   
+
+}
+
+
+#logoicon{
+    max-width:18em;
+    object-fit: contain;
+    left: 0;
+    top:0;
+}
+
+
+/** ===== INPUT ===== */
+
+
+#searchHeader{
+    margin-top:6em;
+    background-color:var(--verde);
+    min-width:100%!important;
+    margin:0;
+    padding:3px;
+    text-transform: uppercase;
+    border: 1px solid var(--verde);
+}
+
+#searchQuery{
+    width:100%;
+    padding:.25em;
+    height: auto;
+    line-height: .75;
+}
+
+.blackgreen{
+    background-color:black;
+    border: 1px solid var(--verde);
+    color: var(--verde);
+    text-transform: uppercase;
 }
