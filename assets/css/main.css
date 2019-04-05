@@ -74,7 +74,7 @@ img{
 
 
 #logoicon{
-    margin: -3em 0em 0 -2em;
+    margin: -3em 0em 0.25em -2em;
     max-width:24em;
     position: relative;
     object-fit: contain;
@@ -87,7 +87,7 @@ img{
 
 
 #searchHeader{
-    margin-top:6em;
+    margin-top:4.5em;
     background-color:var(--verde);
     width:100%;
     margin:0;
@@ -114,7 +114,6 @@ form{
     background-color:black;
     border: 1px solid var(--verde);
     color: var(--verde);
-    text-transform: uppercase;
     padding:0;
     line-height: 0.75;
 }
