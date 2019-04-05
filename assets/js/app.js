@@ -51,7 +51,10 @@ $("#botonesList").on("click", ".botones", function(){
         var imgUrl = response.data[0].images.fixed_height_still.url;
         console.log(imgUrl);
 
-
+        var bandGif = $("<img>");
+            bandGif.attr("src", imgUrl);
+        
+        $("#gifThumb").append(bandGif);
 
 
     })
