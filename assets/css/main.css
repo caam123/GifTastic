@@ -13,11 +13,16 @@ body{
     font-family: "Rubik", Sans-serif;
     color:white;
     font-size: 20px;
-    background-image: url(../img/background.jpg);
+    /*background-image: url(../img/background.jpg);*/
+    background-color: rgb(8, 0, 51);
     background-repeat: no-repeat; 
     font-family: 'Share Tech Mono', monospace;
+
 }
 
+.row{
+    margin-bottom: 1em;
+}
 
 
 nav{
@@ -69,7 +74,9 @@ img{
 
 
 #logoicon{
-    max-width:18em;
+    margin: -3em 0em 0 -2em;
+    max-width:24em;
+    position: relative;
     object-fit: contain;
     left: 0;
     top:0;
@@ -82,16 +89,23 @@ img{
 #searchHeader{
     margin-top:6em;
     background-color:var(--verde);
-    min-width:100%!important;
+    width:100%;
     margin:0;
-    padding:3px;
+    padding:4px 3px;
     text-transform: uppercase;
     border: 1px solid var(--verde);
+    line-height: 0.75;
+    font-size: 0.75em;
+    color:black;
+}
+
+form{
+    width:100%;
 }
 
 #searchQuery{
     width:100%;
-    padding:.25em;
+    padding:.15em;
     height: auto;
     line-height: .75;
 }
@@ -101,4 +115,79 @@ img{
     border: 1px solid var(--verde);
     color: var(--verde);
     text-transform: uppercase;
+    padding:0;
+    line-height: 0.75;
 }
+#addBand{
+    width: 30%;
+    font-size: 0.8em;
+    position: relative;
+    height:auto;
+    background-color: black;
+    color: var(--verde);
+
+}
+
+.botones{
+    font-size: 0.75em;
+    margin:0em 0.5em 1em 0;
+    color:var(--verde);
+    background: black;
+    border: 1px solid var(--verde);
+    padding:3px;
+}
+
+.headerTab{
+    background-color:var(--verde);
+    min-width:100%!important;
+    margin:0;
+    padding:0px 3px;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    color:black;
+}
+
+.headerTab p{
+    margin-bottom:0;
+}
+
+.favorites{
+    background-color: black;
+    width:100%;
+    border:1px solid var(--verde);
+}
+
+
+
+
+/** ===== EMPIEZA DISPLAY DE GIFS ===== **/
+
+
+.gifContainer{
+    float:left;
+}
+.gifThumb{
+    background-color: black;;
+}
+.gifButtons{
+    display:flex;
+    justify-content: flex-end;
+    border: 1px solid var(--verde);
+}
+
+.saveFav{
+    background-color:var(--verde);
+    flex: 0 1 auto;
+    padding: 0 5px;
+    margin-left: 1px;
+}
+
+#rating{
+    padding-left:2px;
+    text-align:left;
+    flex: 3 1 auto;
+    margin-bottom: 0px;
+    color:var(--verde);
+    background-color:black;
+}
+
