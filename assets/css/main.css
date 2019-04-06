@@ -164,9 +164,11 @@ form{
 
 .gifContainer{
     float:left;
+    width:50%;
 }
 .gifThumb{
     background-color: black;;
+  
 }
 .gifButtons{
     display:flex;
