@@ -122,9 +122,18 @@ form{
     font-size: 0.8em;
     position: relative;
     height:auto;
-    background-color: black;
-    color: var(--verde);
+    background-color: var(--verde);
+    color: black;
 
+}
+
+#clear{
+    width: 30%;
+    font-size: 0.8em;
+    position: relative;
+    height:auto;
+    background-color: darkgray;
+    color: var(--gray);
 }
 
 .botones{
@@ -163,7 +172,7 @@ form{
 
 
 #gifSection{
-flex-direction: row;
+flex-direction: row-reverse;
 flex-wrap: wrap;
 }
 

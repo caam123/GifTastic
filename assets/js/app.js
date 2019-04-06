@@ -39,7 +39,7 @@ $("#addBand").on("click", function(event){
 
 
 $("#botonesList").on("click", ".botones", function(){
-   $("#GifSection").empty();
+   
     
     var inputBand = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ inputBand+ "&api_key=" + "I2RjtQO6f9dyGFX4Yt6r1GKXbWD0gU1w&limit=10"
@@ -126,6 +126,15 @@ $("#botonesList").on("click", ".botones", function(){
 
 
 
+$("#clear").on("click", function(){
+    $("#GifSection").empty();
+});
+
+
+
+
+
+
 //Por alguna razon es dificil acceder al ".gif" como queria hacerlo asi que despues d emuchos intentos quedo con $(document) y "img". Funciona .
 
 $(document).on("click", "img",  function(event){
@@ -139,8 +148,6 @@ $(document).on("click", "img",  function(event){
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still")
     }
-
-
 });
 
 
