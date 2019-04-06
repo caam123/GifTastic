@@ -63,6 +63,7 @@ a{
 
 img{
     width: 100%;
+    object-fit: contain;
 }
 
 .logoicon{
@@ -172,15 +173,13 @@ form{
 
 
 #gifSection{
-flex-direction: row-reverse;
+flex-direction: row;
 flex-wrap: wrap;
 }
 
-img{
-    z-index: 999;
-}
+
 .gifContainer{
-    float:left;
+    display: inline-block;
     flex: 0 2 auto;
     margin: 1em;
     width: 40%;
