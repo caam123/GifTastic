@@ -89,12 +89,15 @@ $("#botonesList").on("click", ".botones", function(){
             
             var buttonSave = $("<button>");
                 buttonSave.addClass("saveFav save");
+                
 
             var buttonFave = $("<button>");
                 buttonFave.addClass("saveFav fav");  
                 
-            var saveIcon = $("<i>");
+            var saveIcon = $("<a>");
                 saveIcon.addClass("far fa-save");
+                saveIcon.attr("href", imgAnimate);
+                saveIcon.attr("download");
                 buttonSave.append(saveIcon);
                 gifButtons.append(buttonSave);
             
