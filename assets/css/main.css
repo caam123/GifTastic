@@ -167,11 +167,14 @@ flex-direction: row;
 flex-wrap: wrap;
 }
 
-
+img{
+    z-index: 999;
+}
 .gifContainer{
     float:left;
     flex: 0 2 auto;
     margin: 1em;
+    min-width: 40%;
 }
 .gifThumb{
     background-color: black;;

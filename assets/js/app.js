@@ -1,5 +1,5 @@
 
-var bands = ["George Michael", "Erasure", "Pet Shop Boys", "OMD", "Madonna"];
+var bands = ["George Michael", "Erasure", "Pet Shop Boys", "Depeche Mode", "Madonna"];
 //var apikey = "I2RjtQO6f9dyGFX4Yt6r1GKXbWD0gU1w";
 var apikey = "dc6zaTOxFJmzC";
 
@@ -57,8 +57,8 @@ $("#botonesList").on("click", ".botones", function(){
         for (var i = 0; i < results.length; i++) {
             
 
-            var imgUrl = response.data[i].images.fixed_height.url;
-        
+            var imgUrl = response.data[i].images.fixed_height_still.url;
+            var imgAnimate = response.data[i].images.fixed_height.url;
 
             var gifContainer = $("<div>");
                 gifContainer.addClass("gifContainer");
@@ -71,7 +71,11 @@ $("#botonesList").on("click", ".botones", function(){
                 gifContainer.append(gifThumb);
 
             var bandGif = $("<img>");
-                bandGif.attr("src", imgUrl);
+                bandGif.addClass(".bandGif");
+                bandGif.attr("src", imgUrl)
+                bandGif.attr("data-state", "still");
+                bandGif.attr("data-still", imgUrl)
+                bandGif.attr("data-animate", imgAnimate);
                 gifThumb.append(bandGif);
                 
             var gifButtons = $("<div>");
@@ -99,12 +103,6 @@ $("#botonesList").on("click", ".botones", function(){
                 buttonFave.append(heartIcon);
                 gifButtons.append(buttonFave);
 
-
-                
-    
-           
-            
-          
            /*De esta manera estaba antes y NO NO NO NO funciona así, hay que separar, sino cosas extranas suceden*/
            /*
             $("#GifSection").append(gifContainer);     
@@ -125,6 +123,25 @@ $("#botonesList").on("click", ".botones", function(){
 
 
 }); // Termina botones on click function
+
+
+
+//Por alguna razon es dificil acceder al ".gif" como queria hacerlo asi que despues d emuchos intentos quedo con $(document) y "img". Funciona .
+
+$(document).on("click", "img",  function(event){
+
+    var state = $(this).attr("data-state");
+    
+    if(state === "still"){
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    }else{
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still")
+    }
+
+
+});
 
 
 
