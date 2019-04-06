@@ -62,49 +62,63 @@ $("#botonesList").on("click", ".botones", function(){
         
 
             var gifContainer = $("<div>");
-                gifContainer.addClass("gifContainer")
+                gifContainer.addClass("gifContainer");
+                $("#GifSection").append(gifContainer);  
+
 
         
             var gifThumb = $("<div>");
                 gifThumb.addClass("gifThumb");
+                gifContainer.append(gifThumb);
 
             var bandGif = $("<img>");
-                //bandGif.attr("src", imgUrl);
+                bandGif.attr("src", imgUrl);
+                gifThumb.append(bandGif);
 
                 
 
             var gifButtons = $("<div>");
                 gifButtons.addClass("gifButtons");
+                gifContainer.append(gifButtons);
 
             var pButtons = $("<p>");
                 pButtons.addClass("rating");
                 pButtons.text("Rating: " + response.data[i].rating);
+                gifButtons.append(pButtons);
             
             var buttonSave = $("<button>");
                 buttonSave.addClass("saveFav save");
 
+
             var buttonFave = $("<button>");
-                buttonFave.addClass("saveFav fav");   
+                buttonFave.addClass("saveFav fav");  
+                
+                 
+                
                 
             var saveIcon = $("<i>");
                 saveIcon.addClass("far fa-save");
+                buttonSave.append(saveIcon);
+                gifButtons.append(buttonSave);
             
             var heartIcon = $("<i>");
                 heartIcon.addClass("far fa-heart");
+                buttonFave.append(heartIcon);
+                gifButtons.append(buttonFave);
+
 
                 
-
-            buttonSave.append(saveIcon);
-            buttonFave.append(heartIcon);
     
-            gifButtons.append(pButtons);
-            gifButtons.append(buttonSave);
-            gifButtons.append(buttonFave);
-
+           
+            
+          
+           /*De esta manera estaba antes y NO NO NO NO funciona así, hay que separar, sino cosas extranas suceden*/
+           /*
             $("#GifSection").append(gifContainer);     
             $(".gifContainer").append(gifThumb);
             $(".gifContainer").append(gifButtons);
             $(".gifThumb").append(bandGif);
+            */
 
             
             /*$(".gifContainer").append(pButtons);
