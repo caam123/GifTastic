@@ -170,7 +170,8 @@ flex-wrap: wrap;
 
 .gifContainer{
     float:left;
-    width:40%;
+    flex: 0 2 auto;
+    margin: 1em;
 }
 .gifThumb{
     background-color: black;;
@@ -179,8 +180,11 @@ flex-wrap: wrap;
 .gifButtons{
     display:flex;
     justify-content: flex-end;
-    border: 1px solid var(--verde);
     width:100%;
+}
+
+.rating{
+    border: 1px solid var(--verde);
 }
 
 .saveFav{
@@ -199,3 +203,10 @@ flex-wrap: wrap;
     background-color:black;
 }
 
+/* MEDIA QUERIES */
+
+@media screen and (max-width:768px){
+    .gifContainer{
+        flex: 0 1 auto;
+    }
+}

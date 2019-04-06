@@ -42,7 +42,7 @@ $("#botonesList").on("click", ".botones", function(){
    $("#GifSection").empty();
     
     var inputBand = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ inputBand+ "&api_key=" + "I2RjtQO6f9dyGFX4Yt6r1GKXbWD0gU1w&limit=5"
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ inputBand+ "&api_key=" + "I2RjtQO6f9dyGFX4Yt6r1GKXbWD0gU1w&limit=10"
     console.log(queryURL);
 
     $.ajax({
@@ -53,7 +53,6 @@ $("#botonesList").on("click", ".botones", function(){
         console.log(response);
 
         var results = response.data;
-        console.log("results",results)
 
         for (var i = 0; i < results.length; i++) {
             
@@ -74,9 +73,7 @@ $("#botonesList").on("click", ".botones", function(){
             var bandGif = $("<img>");
                 bandGif.attr("src", imgUrl);
                 gifThumb.append(bandGif);
-
                 
-
             var gifButtons = $("<div>");
                 gifButtons.addClass("gifButtons");
                 gifContainer.append(gifButtons);
@@ -89,12 +86,8 @@ $("#botonesList").on("click", ".botones", function(){
             var buttonSave = $("<button>");
                 buttonSave.addClass("saveFav save");
 
-
             var buttonFave = $("<button>");
                 buttonFave.addClass("saveFav fav");  
-                
-                 
-                
                 
             var saveIcon = $("<i>");
                 saveIcon.addClass("far fa-save");
