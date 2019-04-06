@@ -151,7 +151,14 @@ $(document).on("click", "img",  function(event){
 });
 
 
+$(document).on("click", ".fav", function(){
+    
+    var parents = $(this).parents(".gifContainer");
 
+    $(parents).clone().appendTo(".favorites");
+
+
+})
 
 
 // ===== LLAMADA DE FUNCIONES =====
