@@ -62,7 +62,7 @@ $("#botonesList").on("click", ".botones", function(){
 
             var gifContainer = $("<div>");
                 gifContainer.addClass("gifContainer");
-                $("#GifSection").append(gifContainer);  
+                $("#GifSection").prepend(gifContainer);  
 
 
         

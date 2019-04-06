@@ -183,7 +183,7 @@ img{
     float:left;
     flex: 0 2 auto;
     margin: 1em;
-    min-width: 40%;
+    width: 40%;
 }
 .gifThumb{
     background-color: black;;
