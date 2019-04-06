@@ -161,6 +161,21 @@ $(document).on("click", ".fav", function(){
 })
 
 
+$(document).on("click", ".save", function(){
+    
+    var parents = $(this).parents(".gifContainer");
+
+     var gifUrl = $(parents).find("img").attr("data-animate");
+
+     console.log(gifUrl);
+
+    window.location.href= gifUrl;
+
+
+
+})
+
+
 // ===== LLAMADA DE FUNCIONES =====
 
 displayButtons();
